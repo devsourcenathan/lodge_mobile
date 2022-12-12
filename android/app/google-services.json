@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "107036849789",
+    "project_id": "lodge-b027a",
+    "storage_bucket": "lodge-b027a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107036849789:android:b3ff491828fae1c03a2314",
+        "android_client_info": {
+          "package_name": "com.example.lodge_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107036849789-1h4b1uq5s3ehrjr6to93o1cv56ndmk03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIjA_MqF2Vo72ddkzEdvmpMH1CNZuwT3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107036849789-1h4b1uq5s3ehrjr6to93o1cv56ndmk03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
