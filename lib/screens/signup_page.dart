@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:lodge_app/screens/signup_page.dart';
+import 'package:lodge_app/screens/login_page.dart';
 import 'package:lodge_app/widgets/my_button.dart';
 import 'package:lodge_app/widgets/my_text_field.dart';
 import 'package:lodge_app/widgets/square_tile.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+class SignupPage extends StatelessWidget {
+  SignupPage({super.key});
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+  final emailController = TextEditingController();
 
   //sign in method
-  void signUserIn(context) {
-    // Navigator.pushReplacement(
-    //   context,
-    //   MaterialPageRoute(
-    //     builder: (context) => HomeScreen(),
-    //   ),
-    // );
-  }
+  void signUserUp() {}
 
   void goTo(context, page) {
     Navigator.pushReplacement(
@@ -50,12 +44,24 @@ class LoginPage extends StatelessWidget {
               //welcome
 
               Text(
-                "Bienvenue, se connecter",
+                "Bienvenue, inscrivez vous pour continuer",
                 style: TextStyle(
                   color: Colors.grey[700],
                   fontSize: 18,
                 ),
               ),
+
+              const SizedBox(
+                height: 20,
+              ),
+              //username
+
+              MyTextField(
+                controller: emailController,
+                hintText: "Email",
+                obscureText: false,
+              ),
+
               const SizedBox(
                 height: 20,
               ),
@@ -78,32 +84,17 @@ class LoginPage extends StatelessWidget {
               ),
 
               const SizedBox(
-                height: 20,
-              ),
-
-              //forgot password
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      "Mot de passe oublié ?",
-                      style: TextStyle(color: Colors.grey[600]),
-                    ),
-                  ],
-                ),
-              ),
-
-              const SizedBox(
                 height: 25,
               ),
 
               //Sign in Button
-              MyButton(onTap: () => signUserIn(context), text: "Se connecter"),
+              MyButton(
+                onTap: signUserUp,
+                text: "S'inscrire",
+              ),
 
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
 
               //continue with
@@ -120,7 +111,7 @@ class LoginPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
-                        "Ou continuer avec ",
+                        "Ou continuer avec",
                         style: TextStyle(
                           color: Colors.grey[700],
                         ),
@@ -161,20 +152,18 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Pas encore inscrit ?",
+                    "Déjà inscrit ?",
                     style: TextStyle(color: Colors.grey[700]),
                   ),
                   const SizedBox(
                     width: 5,
                   ),
                   GestureDetector(
-                    onTap: () => goTo(context, SignupPage()),
+                    onTap: () => goTo(context, LoginPage()),
                     child: const Text(
-                      "S'inscrire maintenant",
+                      "Se connecter",
                       style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                      ),
+                          color: Colors.blue, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
